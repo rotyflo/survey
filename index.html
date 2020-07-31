@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="stylesheet" href="css/main.css">
   <title>Survey Form</title>
 </head>
 <body>
@@ -14,21 +14,22 @@
   <form id="survey-form" action="index.html" method="post">
     <div>
       <label id="name-label" for="name">Name</label>
-      <input id="name" type="text" name="name" placeholder="First Last" required>
+      <input id="name" class="wide" type="text" name="name" placeholder="First Last" required>
     </div>
 
     <div>
       <label id="email-label" for="email">Email</label>
-      <input id="email" type="email" name="email" placeholder="name@domain.com" required>
+      <input id="email" class="wide" type="email" name="email" placeholder="name@domain.com" required>
     </div>
 
     <div>
-      <label id="number-label" for="number">Pick a number between 1 and 100</label>
-      <input id="number" type="number" name="number" min="1" max="100" placeholder="23">
+      <label id="number-label" for="number">Number</label>
+      <input id="number" class="wide" type="number" name="number" min="1" max="10" placeholder="10">
     </div>
 
     <div>
-      <select id="dropdown" name="">
+      <label for="">Select one!</label>
+      <select id="dropdown" class="wide" name="">
         <option value="item1">item1</option>
         <option value="item2">item2</option>
         <option value="item3">item3</option>
@@ -36,35 +37,43 @@
     </div>
 
     <div>
-      <p>Favorite Color</p>
-      <input type="radio" name="fav-color" value="red">
-      <label for="red">Red</label>
-
-      <input type="radio" name="fav-color" value="green">
-      <label for="green">Green</label>
-
-      <input type="radio" name="fav-color" value="blue">
-      <label for="blue">Blue</label>
+      <label for="fav-color">Favorite Color</label>
+      <div>
+        <input type="radio" name="fav-color" value="red">
+        <label for="red">Red</label>
+      </div>
+      <div>
+        <input type="radio" name="fav-color" value="green">
+        <label for="green">Green</label>
+      </div>
+      <div>
+        <input type="radio" name="fav-color" value="blue">
+        <label for="blue">Blue</label>
+      </div>
     </div>
 
     <div>
-      <p>Preferred Pizza Toppings</p>
-      <input type="checkbox" name="toppings" value="cheese">
-      <label for="cheese">Cheese</label>
-
-      <input type="checkbox" name="toppings" value="mushrooms">
-      <label for="mushrooms">Mushrooms</label>
-
-      <input type="checkbox" name="toppings" value="jalapenos">
-      <label for="jalapenos">Jalapenos</label>
+      <label for="toppings">Toppings</label>
+      <div>
+        <input type="checkbox" name="toppings" value="cheese">
+        <label for="cheese">Cheese</label>
+      </div>
+      <div>
+        <input type="checkbox" name="toppings" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+      </div>
+      <div>
+        <input type="checkbox" name="toppings" value="jalapenos">
+        <label for="jalapenos">Jalapenos</label>
+      </div>
     </div>
 
-    <p>Additional Comments</p>
-    <textarea name="comments" rows="8" cols="80"></textarea>
+    <label for="comments">Additional Comments</label>
+    <textarea name="comments" class="wide" rows="8"></textarea>
 
     <br>
 
-    <button id="submit" type="submit" name="submit">Submit</button>
+    <button id="submit" class="wide" type="submit" name="submit">Submit</button>
   </form>
 
   <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
